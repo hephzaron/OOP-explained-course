@@ -17,19 +17,15 @@ class Course {
     }
 }
 
-class AnatomyCours extends Course {
+// For a medicine student studying anatomy, the lecture decides to add the points to ther course
+// using the pproperties and method from the parent class
+class AnatomyCourse extends Course {
 
-    constructor(courseUnit) {
-        this.courseUnit = courseUnit;
-    }
     register() {
-        super.register();
-        return (this.courseTitle + ',' + this.courseUnit);
+        return (this.courseTitle + ' is ' + '7 points');
     }
-}
-
-var d = new Dog('Mitzie');
-d.speak(); // Mitzie barks.
-
 
 }
+// create an instance of AnatomyCourse
+var sunday = new AnatomyCourse('anatomy');
+sunday.register();
